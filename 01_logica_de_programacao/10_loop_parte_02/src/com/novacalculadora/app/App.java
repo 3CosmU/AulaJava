@@ -13,11 +13,8 @@ public class App {
         double y;
         double resultado = 0.0;
         String operacao;
-        int opcao = 0;
 
-        // Entrada de dados
-
-        // FIXME: loop (Laço de repetição)
+        // loop (Laço de repetição)
         do {
 
             // Menu
@@ -31,13 +28,16 @@ public class App {
             System.out.println("Informe a opção desejada: ");
             operacao = leia.nextLine();
 
-            if (operacao != "7") {
+            if (!operacao.equals("7")) {
 
                 // Entrada de dados
                 System.out.println("Informe o valor de x: ");
                 x = leia.nextDouble();
                 System.out.println("Informe o valor de y: ");
                 y = leia.nextDouble();
+
+                // Limpeza de buff
+                leia.nextLine();
 
                 switch (operacao) {
                     case "1":
@@ -60,21 +60,14 @@ public class App {
                         break;
                     default:
                         System.out.println("Operador inválido.");
-
                 }
-                // Mostrar resultado
 
+                // Mostrar resultado
                 System.out.println("Resultado: " + resultado);
             }
 
-            else {
-                opcao = Integer.parseInt(operacao);
-            }
-
-            // Limpeza de buff
-            leia.nextLine();
-
-        } while (opcao != 7);
+        } while (!operacao.equals("7"));
+        System.out.println("Programa finalizado!");
 
         // Fecha o objeto leia
         leia.close();
