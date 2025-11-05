@@ -11,6 +11,7 @@ public class App {
         String[] salas = new String[5]; // Array com 5 posições
         String nome;
         String sala;
+        String filme = "";
         int idade;
         int idadeMinima = 0;
 
@@ -41,7 +42,39 @@ public class App {
             System.out.println("Informe a sala desejada");
             sala = leia.nextLine();
 
-            //TODO : terminar o programa 
+            switch (sala) {
+                case "1":
+                    filme = salas[0];
+                    idadeMinima = 0;
+                    break;
+                case "2":
+                    filme = salas[1];
+                    idadeMinima = 12;
+                    break;
+                case "3":
+                    filme = salas[2];
+                    idadeMinima = 14;
+                    break;
+                case "4":
+                    filme = salas[3];
+                    idadeMinima = 16;
+                    break;
+                case "5":
+                    filme = salas[4];
+                    idadeMinima = 18;
+                    break;
+                default:
+                    System.out.println("Sala inexistente.");
+
+            }
+            // Verificação da idade
+            if (idade >= idadeMinima) {
+                System.out.println("Filme escolhido: " + filme);
+                System.out.println("Tenha um bom filme: " + nome);
+            } else {
+                System.out.println("Entrada não permitida!");
+                System.out.println("Por favor escolha outro filme!");
+            }
         } while (idade < idadeMinima);
 
         // fechar o objeto leia
@@ -65,4 +98,3 @@ public class App {
  * - Sala 4 - As Tranças do Rei Careca - 16 anos
  * - Sala 5 - A Vingança do Peixe Frito - 18 anos
  */
-
