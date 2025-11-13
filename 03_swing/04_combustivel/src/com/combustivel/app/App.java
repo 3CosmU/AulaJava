@@ -19,20 +19,22 @@ public class App {
             // Entrada de dados
             opcao = JOptionPane.showInputDialog(
                     null,
-                    "Selecione uma opção",
-                    "Combustivel",
-                    0,
+                    "Selecione uma opção", // Texto na box
+                    "Combustivel", // Titulo da box
+                    JOptionPane.INFORMATION_MESSAGE, // Icon da box
                     null,
-                    opcoes,
+                    opcoes, // Array
                     opcoes[0]);
 
             if (opcao != "Sair do programa") {
                 // Entrada de dados
                 combustivel.setGasolina(
-                        Double.parseDouble(JOptionPane.showInputDialog("Informe o valor da Gasolina: ").replace(",", ".")));
+                        Double.parseDouble(
+                                JOptionPane.showInputDialog("Informe o valor da Gasolina: ").replace(",", ".")));
                 combustivel.setEtanol(
-                        Double.parseDouble(JOptionPane.showInputDialog("Informe o valor do Etanol: ").replace(",", ".")));
-    
+                        Double.parseDouble(
+                                JOptionPane.showInputDialog("Informe o valor do Etanol: ").replace(",", ".")));
+
                 // Saida de dados
                 JOptionPane.showMessageDialog(null, combustivel.calcularCombustivel());
 
@@ -48,5 +50,6 @@ public class App {
 /*
  * Usamos Object quando:
  * Queremos armazenar valores de tipos diferentes na mesma variável ou coleção.
- * Ou quando queremos criar funções genéricas, que aceitam qualquer tipo de  objeto.
+ * Ou quando queremos criar funções genéricas, que aceitam qualquer tipo de
+ * objeto.
  */
