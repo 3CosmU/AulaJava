@@ -23,7 +23,7 @@ public class App {
                     "Combustivel", // Titulo da box
                     JOptionPane.INFORMATION_MESSAGE, // Icon da box
                     null,
-                    opcoes, // Array
+                    opcoes, // Array 
                     opcoes[0]);
 
             if (opcao != "Sair do programa") {
