@@ -19,12 +19,50 @@ public class App {
                 "Sair do programa" };
 
         Object opcao;
+        double valor;
 
         // Entrada de dados
         cc.setTitular(JOptionPane.showInputDialog("Informe o nome do titular da conta: "));
         cc.setCpf(JOptionPane.showInputDialog("Informe o Cpf da conta: "));
+        
+        do {
 
-        // TODO: Fazer o laço de repetição...
+            opcao = JOptionPane.showInternalInputDialog(
+                    null,
+                    "Escolha a opção desejada",
+                    null,
+                    JOptionPane.QUESTION_MESSAGE,
+                    null,
+                    opcoes,
+                    opcoes[0]);
+
+            if (opcao == "Consultar dados") {
+                JOptionPane.showMessageDialog(null, cc.consultarDados());
+            } else if (opcao == "Depositar") {
+                valor = Double.parseDouble(
+                        JOptionPane.showInputDialog("Informe o valor do deposito em R$: ").replace(",", "."));
+                JOptionPane.showMessageDialog(null, "Deposito efetuado com sucesso. \nValor do saldo: R$ "
+                        + String.format("%.2f", cc.depositar(valor)));
+            }
+
+            else if (opcao == "Sacar") {
+                valor = Double.parseDouble(
+                        JOptionPane.showInputDialog(("Informe o valor do saque em R%: ")).replace(",", "."));
+                if (cc.getSaldo() >= valor) {
+                    JOptionPane.showMessageDialog(null,
+                            "Saque efetuado com sucesso." +
+                                    "\nValor do saldo: R$ " +
+                                    String.format("%.2f", cc.sacar(valor)));
+                } else {
+                    JOptionPane.showMessageDialog(null,
+                            "Saldo Insuficiente" +
+                                    "\nSaldo atual: R$" +
+                                    String.format("%.2f", cc.getSaldo()));
+                }
+
+            }
+
+        } while (opcao != "Sair");
 
     }
 }
