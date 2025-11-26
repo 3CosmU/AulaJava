@@ -1,0 +1,109 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+h1 {
+    text-align: center;
+    color: #120077;
+    text-shadow: 1px 1px 1px #16161d;
+}
+
+main {
+    margin: 30px 100px;
+}
+
+form {
+    margin: 50px 15px
+}
+
+label,
+button {
+    display: block;
+}
+
+label {
+    margin: 5px 0px;
+}
+
+
+button:hover {
+    background-color: green;
+    transition: 0.5s ease;
+    transform: scale(1.07);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+input,
+select {
+    margin-bottom: 10px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #080077;
+    border-left: 2px solid #080077;
+
+}
+
+input:focus,
+select:focus {
+    border-bottom: solid #acabab;
+    border-left: solid #acabab;
+    transition: 0.5s ease;
+}
+
+select {
+    background-color: rgb(255, 255, 255);
+}
+
+.nome {
+    width: 50%;
+}
+
+.dataNascimento {
+    width: 20%;
+}
+
+.altura {
+    width: 20%;
+}
+
+.genero {
+    width: 30%;
+}
+
+.telefone {
+    width: 30%;
+}
+
+.escolaridade {
+    width: 30%;
+}
+
+.container {
+    max-width: 900px;
+    margin: 60px auto;
+    background: rgb(255, 255, 255);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 50px rgba(74, 20, 221, 0.15);
+    background-image: url('https://images.unsplash.com/photo-1502082553048-f009c37129b9?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGFwZWwlMjBkZSUyMHBhcmVkZSUyMCVDMyVBMXJ2b3JlfGVufDB8fDB8fHww');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+}
+
+
+button {
+    display: inline-block;
+    background: linear-gradient(135deg, #4A90E2, #0072ff);
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}

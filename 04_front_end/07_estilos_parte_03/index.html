@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=z, initial-scale=1.0">
+    <title>Formulário com Css</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <main>
+
+            <h1>Formulário</h1>
+
+            <form>
+                <label for="">Nome:</label>
+                <input class="nome" type="text">
+
+                <label for="">Email:</label>
+                <input class="email" type="email">
+
+                <label for="">Data de nascimento:</label>
+                <input class="dataNascimento" type="date">
+
+                <label>Altura:</label>
+                <input class="altura" type="number" step="0.01">
+
+                <label for="telefone" class="form-label">Telefone</label>
+                <input type="tel" id="telefone" class="telefone" placeholder="(XX) XXXXX-XXXX">
+
+
+
+                <label for="">Gênero:</label>
+                <select class="genero" name="" id="">
+                    <option value="">Escolha um gênero</option>
+                    <option value="">Masculino</option>
+                    <option value="">Feminino</option>
+                    <option value="">Outros</option>
+                    <option value="">Não desejo informar.</option>
+                </select>
+
+
+
+                <label for="escolaridade" class="form-label">Nível de Escolaridade</label>
+                <select class="escolaridade" id="escolaridade">
+                    <option value="">Selecione</option>
+                    <option value="fundamental-incompleto">Ensino Fundamental Incompleto</option>
+                    <option value="fundamental-completo">Ensino Fundamental Completo</option>
+                    <option value="medio-incompleto">Ensino Médio Incompleto</option>
+                    <option value="medio-completo">Ensino Médio Completo</option>
+                    <option value="superior-incompleto">Ensino Superior Incompleto</option>
+                    <option value="superior-completo">Ensino Superior Completo</option>
+                    <option value="pos-graduacao">Pós-graduação</option>
+                    <option value="mestrado">Mestrado</option>
+                    <option value="doutorado">Doutorado</option>
+
+
+                </select>
+
+
+                <label for="profissao" class="form-label">Profissão</label>
+                <input type="text" id="profissao" class="form-control" placeholder="Digite sua profissão">
+
+                <label for="salario" class="form-label">Salário Bruto (R$)</label>
+                <input type="number" id="salario" class="form-control" placeholder="Ex: 3500.00" step="0.01" min="0"><br>
+
+                <button><a href="segunda.html" target="_blank" class="btn-form">Ir para segunda página</a>
+                </button>
+
+
+
+
+
+    </div>
+
+
+
+
+    </form>
+
+    </main>
+    </div>
+
+
+</body>
+
+</html>
