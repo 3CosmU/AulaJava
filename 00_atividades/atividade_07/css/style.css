@@ -1,0 +1,117 @@
+.pic {
+    width: 190px;
+    height: 50;
+
+}
+
+.imgBoy {
+    width: 70px;
+    height: 100;
+
+
+}
+
+.sombra-navbar {
+
+    background-color: #000000;
+
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* .container-fluid {
+
+    color: #751717b9;
+    font-weight: bold;
+    text-shadow: 1px 2px 1 px #ffc4c4;
+    opacity: 0.9;
+
+} */
+/* Tamanho do navbar */
+.navbar-nav .nav-link {
+    color: white;
+    padding: 10px 40px;
+    font-size: 30px;
+    font-weight: 600;
+
+}
+
+/* .navbar-brand {
+    font-size: 22px;
+} */
+.sombra-navbar {
+    box-shadow: 0px 3px 8px #00000033;
+}
+
+/* Streamer */
+.underline {
+    color: white !important;
+    border-bottom: 5px solid #05d20c;
+    border-radius: 10px;
+
+
+}
+
+.cast-full {
+    background-color: #ff5e5e;
+    color: white !important;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-weight: 100;
+}
+
+.sidebar {
+    position: fixed;
+    top: 110px;
+    left: 0;
+    width: 220px;
+    height: calc(100vh - 80px);
+
+    padding: 15px;
+    border-right: 1px solid #e7e7e7;
+    overflow-y: auto;
+
+}
+
+/* Parte do viwers */
+
+.stream-card {
+    position: relative;
+}
+
+.imagens {
+    position: relative;
+    width: 100%;
+}
+
+.Box {
+    position: absolute;
+    bottom: 8px;
+    /* distância da parte de baixo da imagem */
+    right: 8px;
+    /* canto direito */
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    background: rgba(177, 177, 177, 0.6);
+    padding: 3px 6px;
+    border-radius: 5px;
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+}
+
+.viewers-box span {
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.stream-title {
+    margin-top: 8px;
+    color: white;
+    font-size: 18px;
+}
