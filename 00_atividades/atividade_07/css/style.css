@@ -18,15 +18,6 @@
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
 }
 
-
-/* .container-fluid {
-
-    color: #751717b9;
-    font-weight: bold;
-    text-shadow: 1px 2px 1 px #ffc4c4;
-    opacity: 0.9;
-
-} */
 /* Tamanho do navbar */
 .navbar-nav .nav-link {
     color: white;
@@ -39,23 +30,22 @@
 /* .navbar-brand {
     font-size: 22px;
 } */
+
 .sombra-navbar {
     box-shadow: 0px 3px 8px #00000033;
 }
 
-/* Streamer */
+/* Config botao Streamer */
 .underline {
     color: white !important;
     border-bottom: 5px solid #05d20c;
     border-radius: 10px;
-
-
 }
 
+/* Config botao Cast now */
 .cast-full {
     background-color: #ff5e5e;
     color: white !important;
-    padding: 10px 16px;
     border-radius: 10px;
     font-weight: 100;
 }
@@ -73,45 +63,83 @@
 
 }
 
-/* Parte do viwers */
-
-.stream-card {
-    position: relative;
-}
-
+/* Posição do box viewers */
 .imagens {
     position: relative;
     width: 100%;
 }
 
+/* conf box viewers */
 .Box {
     position: absolute;
-    bottom: 8px;
-    /* distância da parte de baixo da imagem */
-    right: 8px;
-    /* canto direito */
+    bottom: 1px;
     display: flex;
     align-items: center;
     gap: 4px;
-
     background: rgba(177, 177, 177, 0.6);
     padding: 3px 6px;
     border-radius: 5px;
 }
 
+/* Icone dos viewers */
 .icon {
     width: 16px;
     height: 16px;
 }
 
-.viewers-box span {
-    color: white;
-    font-size: 13px;
-    font-weight: 600;
+/* Configuração da imagem box*/
+.img-square {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}   
+
+
+.btn-toggle {
+    background-color: #27ae60 !important;
+    /* verde */
+    color: rgb(255, 255, 255) !important;
+    width: 100%;
+    text-align: left;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
 }
 
-.stream-title {
-    margin-top: 8px;
-    color: white;
-    font-size: 18px;
+
+/*  MOdal */
+
+
+/* Fundo colorido do modal */
+.modal-colorido {
+    background: linear-gradient(135deg, #00ff5e, #ffffff);
+    border-radius: 12px;
+}
+
+
+/* Sombra no texto do modal */
+.modal-colorido h5,
+.modal-colorido .modal-body,
+.modal-colorido .btn {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Botão aceitar */
+.btn-aceitar {
+    background-color: #28a745 !important;
+    color: white !important;
+}
+
+/* Botão fechar */
+.btn-fechar {
+    background-color: #dc3545 !important;
+    color: white !important;
+}
+
+/* Centralização e estilo do modal */
+.modal-footer .btn {
+    margin: 0 8px;
+    font-weight: 600;
+    border-radius: 8px;
 }

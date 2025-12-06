@@ -20,7 +20,7 @@
     <nav class="navbar navbar-expand-lg sombra-navbar bg-dark navbar-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="img/aaaaaa.jpg" alt="Logo" class="pic" style="height:60px;">
+                <img src="img/logo_conectayoucastesquerdo.png" alt="Logo" class="pic">
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -52,27 +52,80 @@
 
         <!-- ASIDE -->
         <aside class="sidebar me-4">
-            <h2>Menu Lateral</h2>
-            <ul>
-                <li><a href="#">Perfil</a></li>
-                <li><a href="#">Configurações</a></li>
-                <li><a href="#">Notificações</a></li>
-                <li><a href="#">Sair</a></li>
-            </ul>
+            <div class="flex-shrink-0 p-3 bg-white">
+
+
+                <ul class="list-unstyled ps-0">
+                    <li class="mb-1">
+                        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#home-collapse" aria-expanded="true">
+                            Trending Caster
+                        </button>
+                        <div class="collapse show" id="home-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#" class="link-dark rounded">@BlaBlaBla</a></li>
+                                <li><a href="#" class="link-dark rounded">@BlaBlaBla</a></li>
+                                <li><a href="#" class="link-dark rounded">@BlaBlaBla</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="mb-1">
+                        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#dashboard-collapse" aria-expanded="false">
+                            Hashtags
+                        </button>
+                        <div class="collapse" id="dashboard-collapse" style="">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#" class="link-dark rounded">#BlaBlaBla</a></li>
+                                <li><a href="#" class="link-dark rounded">#BlaBlaBla</a></li>
+                                <li><a href="#" class="link-dark rounded">#BlaBlaBla</a></li>
+                                <li><a href="#" class="link-dark rounded">#BlaBlaBla</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="mb-1">
+                        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#orders-collapse" aria-expanded="false">
+                            Locations
+                        </button>
+                        <div class="collapse" id="orders-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#" class="link-dark rounded">#Downtown</a></li>
+                                <li><a href="#" class="link-dark rounded">#Beach</a></li>
+                                <li><a href="#" class="link-dark rounded">#California</a></li>
+                                <li><a href="#" class="link-dark rounded">#London</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+            </div>
+
         </aside>
 
         <!-- GALERIA -->
         <div class="row flex-grow-1">
 
-            <figure class="col-12 col-md-6 col-lg-3 mt-3 stream-card">
+            <figure class="col-12 col-md-6 col-lg-3 mt-3 stream-card" data-bs-toggle="modal"
+                data-bs-target="#streamModal">
                 <div class="imagens">
-                    <img src="img/2.jpg" class="img-fluid img-square" alt="">
+                    <img src="img/1.jpg" class="img-fluid img-square" alt="">
                     <div class="Box">
                         <img src="img/vision.png" class="icon" alt="">
                         <span>124k</span>
                     </div>
                 </div>
-                <h5 class="titulo-stream">Ola</h5>
+                <h5 class="titulo-stream">Hosan</h5>
             </figure>
 
             <figure class="col-12 col-md-6 col-lg-3 mt-3 stream-card">
@@ -83,119 +136,96 @@
                         <span>124k</span>
                     </div>
                 </div>
-                <h5 class="titulo-stream">Ola</h5>
+                <h5 class="titulo-stream">Gabriela</h5>
             </figure>
 
             <figure class="col-12 col-md-6 col-lg-3 mt-3 stream-card">
                 <div class="imagens">
-                    <img src="img/2.jpg" class="img-fluid img-square" alt="">
+                    <img src="img/3.jpg" class="img-fluid img-square" alt="">
                     <div class="Box">
                         <img src="img/vision.png" class="icon" alt="">
                         <span>124k</span>
                     </div>
                 </div>
-                <h5 class="titulo-stream">Ola</h5>
+                <h5 class="titulo-stream">João</h5>
             </figure>
 
             <figure class="col-12 col-md-6 col-lg-3 mt-3 stream-card">
                 <div class="imagens">
-                    <img src="img/2.jpg" class="img-fluid img-square" alt="">
+                    <img src="img/4.jpg" class="img-fluid img-square" alt="">
                     <div class="Box">
                         <img src="img/vision.png" class="icon" alt="">
                         <span>124k</span>
                     </div>
                 </div>
-                <h5 class="titulo-stream">Ola</h5>
+                <h5 class="titulo-stream">Wanessa</h5>
             </figure>
-            
+
             <figure class="col-12 col-md-6 col-lg-3 mt-3 stream-card">
                 <div class="imagens">
-                    <img src="img/2.jpg" class="img-fluid img-square" alt="">
+                    <img src="img/5.jpg" class="img-fluid img-square" alt="">
                     <div class="Box">
                         <img src="img/vision.png" class="icon" alt="">
                         <span>124k</span>
                     </div>
                 </div>
-                <h5 class="titulo-stream">Ola</h5>
+                <h5 class="titulo-stream">Andressa</h5>
             </figure>
 
             <figure class="col-12 col-md-6 col-lg-3 mt-3 stream-card">
                 <div class="imagens">
-                    <img src="img/2.jpg" class="img-fluid img-square" alt="">
+                    <img src="img/6.jpg" class="img-fluid img-square" alt="">
                     <div class="Box">
                         <img src="img/vision.png" class="icon" alt="">
                         <span>124k</span>
                     </div>
                 </div>
-                <h5 class="titulo-stream">Ola</h5>
+                <h5 class="titulo-stream">Julio123</h5>
             </figure>
 
             <figure class="col-12 col-md-6 col-lg-3 mt-3 stream-card">
                 <div class="imagens">
-                    <img src="img/2.jpg" class="img-fluid img-square" alt="">
+                    <img src="img/7.jpg" class="img-fluid img-square" alt="">
                     <div class="Box">
                         <img src="img/vision.png" class="icon" alt="">
                         <span>124k</span>
                     </div>
                 </div>
-                <h5 class="titulo-stream">Ola</h5>
+                <h5 class="titulo-stream">CarolZinha</h5>
             </figure>
 
             <figure class="col-12 col-md-6 col-lg-3 mt-3 stream-card">
                 <div class="imagens">
-                    <img src="img/2.jpg" class="img-fluid img-square" alt="">
+                    <img src="img/8.jpg" class="img-fluid img-square" alt="">
                     <div class="Box">
                         <img src="img/vision.png" class="icon" alt="">
                         <span>124k</span>
                     </div>
                 </div>
-                <h5 class="titulo-stream">Ola</h5>
+                <h5 class="titulo-stream">Dr.Andre</h5>
             </figure>
 
             <figure class="col-12 col-md-6 col-lg-3 mt-3 stream-card">
                 <div class="imagens">
-                    <img src="img/2.jpg" class="img-fluid img-square" alt="">
+                    <img src="img/9.jpg" class="img-fluid img-square" alt="">
                     <div class="Box">
                         <img src="img/vision.png" class="icon" alt="">
                         <span>124k</span>
                     </div>
                 </div>
-                <h5 class="titulo-stream">Ola</h5>
+                <h5 class="titulo-stream">Dr.Oliveira</h5>
             </figure>
 
             <figure class="col-12 col-md-6 col-lg-3 mt-3 stream-card">
                 <div class="imagens">
-                    <img src="img/2.jpg" class="img-fluid img-square" alt="">
+                    <img src="img/10.jpg" class="img-fluid img-square" alt="">
                     <div class="Box">
                         <img src="img/vision.png" class="icon" alt="">
                         <span>124k</span>
                     </div>
                 </div>
-                <h5 class="titulo-stream">Ola</h5>
+                <h5 class="titulo-stream">Tadaruke</h5>
             </figure>
-
-            <figure class="col-12 col-md-6 col-lg-3 mt-3 stream-card">
-                <div class="imagens">
-                    <img src="img/2.jpg" class="img-fluid img-square" alt="">
-                    <div class="Box">
-                        <img src="img/vision.png" class="icon" alt="">
-                        <span>124k</span>
-                    </div>
-                </div>
-                <h5 class="titulo-stream">Ola</h5>
-            </figure>
-
-            <figure class="col-12 col-md-6 col-lg-3 mt-3 stream-card">
-                <div class="imagens">
-                    <img src="img/2.jpg" class="img-fluid img-square" alt="">
-                    <div class="Box">
-                        <img src="img/vision.png" class="icon" alt="">
-                        <span>124k</span>
-                    </div>
-                </div>
-                <h5 class="titulo-stream">Ola</h5>
-            </figure>
-
         </div>
 
 
@@ -204,6 +234,35 @@
 
 
     </div>
+
+
+    <!-- MODAL BOOTSTRAP 5 -->
+    <div class="modal fade" id="streamModal" tabindex="-1" aria-labelledby="streamModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-colorido">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title text-white" id="streamModalLabel">
+                        Bem vindo de voltar Wagner, @Wagner_Moreira
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body text-white">
+                    Aqui terminamos nosso Front YOUCAST!
+                </div>
+
+                <div class="modal-footer d-flex justify-content-center border-0">
+                    <button type="button" class="btn btn-aceitar px-4">Aceitar</button>
+                    <button type="button" class="btn btn-fechar px-4" data-bs-dismiss="modal">Fechar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
 
 
 
