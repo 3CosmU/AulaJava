@@ -1,37 +1,35 @@
-const form = document.querySelector("form");
+const form = document.querySelector('form');
 
 const calcular = () => {
-    //declaração de áriaveis locais
-    let x = document.querySelector("#x").value;
-    let y = document.querySelector("#y").value;
-    let operador = document.querySelector("#operador").value;
+    // declaração de variáveis locais
+    let x = document.querySelector('#x').value;
+    let y = document.querySelector('#y').value;
+    let operador = document.querySelector('#operador').value;
     let result = 0;
 
-    //TODO: fazer função calcular
+    // verifica a operação selecionada
     switch (operador) {
-        case "soma":
-            result = x + y;
-            document.querySelector("#result").innerHTML = result;
+        case 'soma':
+            result = parseInt(x) + parseInt(y);
+            document.querySelector('#result').innerHTML = result;
             break;
-        case "subtração":
+        case 'subtração':
             result = x - y;
-            document.querySelector("#result").innerHTML = result;
+            document.querySelector('#result').innerHTML = result;
             break;
-        case "multiplicação":
+        case 'multiplicação':
             result = x * y;
-            document.querySelector("#result").innerHTML = result;
+            document.querySelector('#result').innerHTML = result;
             break;
-        case "divisão":
+        case 'divisão':
             result = x / y;
-            document.querySelector("#result").innerHTML = result;
+            document.querySelector('#result').innerHTML = result;
             break;
+
     }
 }
 
-
-
-
-form.addEventListener("subimit", function (event) {
+form.addEventListener('submit', function (event) {
     event.preventDefault();
     calcular();
 });

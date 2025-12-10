@@ -2,7 +2,7 @@
 const form = document.querySelector("Form");
 
 //funç para calcular a maior idade
-const maioridade = () => {
+const teste = () => {
     let nome = document.querySelector("#nome").value;
     let idade = document.querySelector("#idade").value;
     const result = (idade >= 18) ? " é maior de idade" : " é menor de idade"; //Ternario
@@ -33,6 +33,6 @@ const maioridade = () => {
 //evento
 form.addEventListener("submit", function (event) {
     event.preventDefault();
-    maioridade();
+    teste();
 
 });
