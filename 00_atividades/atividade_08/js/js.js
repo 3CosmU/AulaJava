@@ -37,8 +37,8 @@ const exibir = () => {
     *A altura também é convertida para centímetros com (altura * 100). */
 
     //Saida de dados
-    document.querySelector('#result').innerHTML = `
-    <div class="alert alert-info p-4">
+    document.querySelector('#result').innerHTML =
+        `<div class="alert alert-info p-4">
         <h4>Resultado:</h4>
         <p><strong>Nome:</strong> ${nome}</p>
         <p><strong>Data de Nascimento:</strong> ${data}</p>
@@ -49,14 +49,13 @@ const exibir = () => {
         <p><strong>Altura:</strong> ${(altura * 100).toFixed(0)} cm (${altura} m)</p>
         <p><strong>IMC:</strong> ${imc}</p>
         <p><strong>Diagnóstico:</strong> ${diagnostico}</p>
-    </div>
-`;
+    </div>`;
 
     /* Depois que o resultado aparece, o formulário volta a ficar limpo. */
     form.reset();
 };
 /* event.preventDefault() impede a página de recarregar.
-*Chama a função calcular(), que faz todo o trabalho. 
+*Chama a função calcular(), que faz todo o trabalho.    
 */
 form.addEventListener('submit', function (event) {
     event.preventDefault();
