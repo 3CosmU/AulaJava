@@ -4,6 +4,13 @@
 
 }
 
+.nav-link {
+
+    font-size: 25px;
+    text-shadow: 1px 1px 10px;
+
+}
+
 .sombra-navbar {
     background: linear-gradient(to right, #6e6e6e, #707070, #000000);
     box-shadow: 0px 5px 20px #16161d;
@@ -11,23 +18,40 @@
     ;
 }
 
-/* .container {
-    height: 668px;
-    box-shadow: 0px 15px 25px #16161d;
-    margin: 40px auto;
-    border-radius: 20px;
-} */
- 
-    /* body {
-        background: linear-gradient(to right, #e6e6e6, #bb4141, #f3c873);
-    }
+#result p {
+    font-size: 20px;
+    margin: 6px;
+}
 
- */
-.container-fluid {
+body {
+    background: url('https://wallpapers.com/images/high/health-pictures-wzhn47jws3e8w5zc.webp') no-repeat center center fixed;
+    background-size: cover;
+}
 
-    color: #d8d8d8b9;
-    font-weight: bold;
-    text-shadow: 1px 2px 1 px #ffc4c4;
-    opacity: 0.9;
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0);
+    z-index: -1;
+}
 
+/* Remover fundo branco do card e deixar  transparente */
+.card {
+    background: rgba(245, 241, 241, 0) !important;
+    backdrop-filter: blur(3px);
+    border-radius: 12px;
+}
+
+/* Remove o fundo azul da caixa do Bootstrap */
+.alert-info {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+/* Ajuste opcional para melhorar */
+#result p,
+#result h4,
+#result strong {
+    color: #1800ee7e !important;
 }
