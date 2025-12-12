@@ -13,13 +13,13 @@ const exibirInfo = () => {
     let endereco = document.querySelector("#endereco").value;
 
     //saida de dados
-    document.querySelector("#nomeResult").innerHTML = `<b>Nome:</b> ${nome}`;
-    document.querySelector("#emailResult").innerHTML = `<b>E-mail:</b> ${email}`;
-    document.querySelector("#nascimentoResult").innerHTML = `<b>Data de Nascimento:</b> ${nascimento}`;
-    document.querySelector("#cpfResult").innerHTML = `<b>Cpf:</b> ${cpf}`;
-    document.querySelector("#telefoneResult").innerHTML = `<b>Telefone:</b> ${telefone}`;
-    document.querySelector("#cepResult").innerHTML = `<b>Cep:</b> ${cep}`;
-    document.querySelector("#enderecoResult").innerHTML = `<b>Endereço:</b> ${endereco}`;
+    document.querySelector('#nomeResult').innerHTML = `<br>${nome}<br><br>`;
+    document.querySelector('#emailResult').innerHTML = `<b>E-mail:</b> ${email}<br>`;
+    document.querySelector('#nascimentoResult').innerHTML = `<b>Data de Nascimento:</b> ${nascimento}<br>`;
+    document.querySelector('#cpfResult').innerHTML = `<b>CPF:</b> ${cpf}<br>`;
+    document.querySelector('#telefoneResult').innerHTML = `<b>Telefone:</b> ${telefone}<br>`;
+    document.querySelector('#cepResult').innerHTML = `<b>CEP:</b> ${cep}`;
+    document.querySelector('#enderecoResult').innerHTML = `<b>Endereço:</b> ${endereco}<br>`;
 
 
     //apagar dados de todo o formulario
