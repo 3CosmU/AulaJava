@@ -1,0 +1,33 @@
+.pic {
+    width: 30px;
+    margin: 10px 0px;
+
+}
+
+.nav-link {
+
+    font-size: 25px;
+    text-shadow: 1px 1px 10px;
+
+}
+
+.sombra-navbar {
+    background: linear-gradient(to right, #6e6e6e, #707070, #000000);
+    box-shadow: 0px 5px 20px #f70000;
+    border-bottom: 1px solid #eb0b0b;
+    ;
+}
+
+
+/* .card-text,
+#nomeResult,
+#emailResult,
+#nascimentoResult,
+#cpfResult,
+#telefoneResult,
+#cepResult,
+#enderecoResult {
+    display: block;
+    margin-bottom: 10px;
+    /* aumenta o espaço entre as linhas */
+} */

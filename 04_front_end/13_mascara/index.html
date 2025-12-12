@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta name="author" content="Wagner Moreira" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ìndice de IMC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/Style.css">
+    <link rel="shortcut icon" href="img/escala-de-peso.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/mascara-comedia.png" type="image/x-icon">
+
+
+</head>
+
+<body class="bg-light">
+
+    <head>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg sombra-navbar ">
+
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/mascara-de-gas.png" alt="Logo" class="pic">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="#">Máscara de Entrada</a>
+                        </li>
+
+
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+        <!-- Final da navbar -->
+        <br>
+    </head>
+
+
+    <!-- Inicio do formulário/Entrada de dados -->
+    <main>
+        <div class="container">
+            <h1>🎭Formulário com Máscara de Entrada</h1>
+            <hr>
+            <form action="">
+                <div class="row">
+                    <div class="col-12 col-md-6 mb-3">
+                        <label for="form-label">Nome:</label>
+                        <input type="text" class="form-control" id="nome">
+                    </div>
+
+                    <div class="col-12 col-md-6 mb-3">
+                        <label for="form-label">Email:</label>
+                        <input type="email" class="form-control" id="email">
+                    </div>
+
+                    <div class="col-12 col-md-4 mb-3">
+                        <label for="form-label">Data de Nascimento:</label>
+                        <input type="date" class="form-control" id="nascimento">
+                    </div>
+
+                    <div class="col-12 col-md-4 mb-3">
+                        <label for="form-label">Cpf:</label>
+                        <input type="text" class="form-control" id="cpf">
+                    </div>
+
+                    <div class="col-12 col-md-4 mb-3">
+                        <label for="form-label">Telefone:</label>
+                        <input type="tel" class="form-control" id="telefone">
+                    </div>
+
+                    <div class="col-12 col-md-3 mb-3">
+                        <label for="form-label">Cep:</label>
+                        <input type="text" class="form-control" id="cep">
+                    </div>
+
+                    <div class="col-12 col-md-9 mb-3">
+                        <label for="form-label">Endereço:</label>
+                        <input type="text" class="form-control" id="endereco">
+                    </div>
+
+                    <div class="d-flex justify-content-center mt-5 mb-5">
+                        <button type="submit" class="btn btn-success">Enviar</button>
+                    </div>
+
+                </div>
+            </form>
+            <hr>
+
+            <!-- Exibir resultado -->
+            <div class="row">
+                <div class="row d-flex justify-content-center mt-5 mb-5">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Dados do usuário</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary" id="nomeResult"></h6>
+                            <span class="card-text" id="emailResult"></span>
+                            <span class="card-text" id="nascimentoResult"></span>
+                            <span class="card-text" id="cpfResult"></span>
+                            <span class="card-text" id="telefoneResult"></span>
+                            <span class="card-text" id="cepResult"></span>
+                            <p class="card-text" id="enderecoResult"></p>
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+    </main>
+    <!-- Link Js -->
+    <script src="js/js.js"></script>
+</body>
