@@ -1,50 +1,103 @@
-const form = document.querySelector("form");
-const telefoneMask = document.querySelector("#telefone");
-const cepMask = document.querySelector("#cep");
-const pesquisaCep = document.querySelector("#cep")
+const form = document.querySelector('form');
+const telefoneMask = document.querySelector('#telefone');
+const cepMask = document.querySelector('#cep');
+const pesquisaCep = document.querySelector('#cep');
+const pesquisaCpf = document.querySelector("#cpf")
 
-//Function para limpar o form
-const limparFormularioCep = () => {
-    document.querySelector("#estado").value = ("");
-    document.querySelector("#cidade").value = ("");
-    document.querySelector("#bairro").value = ("");
-    document.querySelector("#logradouro").value = ("");
-    document.querySelector("#complemento").value = ("");
-
+const limpaFormularioCep = () => {
+    document.querySelector('#estado').value = ("");
+    document.querySelector('#cidade').value = ("");
+    document.querySelector('#bairro').value = ("");
+    document.querySelector('#logradouro').value = ("");
+    document.querySelector('#complemento').value = ("");
 }
 
 const meuCallback = (conteudo) => {
     if (!("erro" in conteudo)) {
-        document.querySelector("#estado").value = (conteudo.uf);
-        document.querySelector("#cidade").value = (conteudo.localidade);
-        document.querySelector("#bairro").value = (conteudo.bairro);
-        document.querySelector("#logradouro").value = (conteudo.logradouro);
-        document.querySelector("#complemento").value = (conteudo.complemento);
-
+        document.querySelector('#estado').value = (conteudo.uf);
+        document.querySelector('#cidade').value = (conteudo.localidade);
+        document.querySelector('#bairro').value = (conteudo.bairro);
+        document.querySelector('#logradouro').value = (conteudo.logradouro);
+        document.querySelector('#complemento').value = (conteudo.complemento);
     }
     else {
-        limparFormularioCep();
-        alert("Cep não encontrado.")
-
+        limpaFormularioCep();
+        alert("CEP não encontrado.");
     }
 }
 
-//TODO: Funções de mascara de entrada e função pesquisaCep
+//mask cpf,cep,telefone
+telefoneMask.addEventListener("input", function () {
+    this.value = this.value
+        .replace(/\D/g, "")
+        .replace(/(\d{2})(\d)/, "($1)$2")
+        .replace(/(\d{4,5})(\d)/, "$1-$2")
+        .replace(/(-\d{4})\d+?$/, "$1");
+});
 
-//Variaveis para armazenamento de dados
+cepMask.addEventListener("input", function () {
+    this.value = this.value
+        .replace(/\D/g, "")
+        .replace(/(\d{5})(\d)/, "$1-$2")
+        .replace(/(-\d{3})\d+?$/, "$1");
+
+});
+
+pesquisaCpf.addEventListener("input", function () {
+    this.value = this.value
+        .replace(/\D/g, "")
+        .replace(/(\d{3})(\d)/, "$1.$2")
+        .replace(/(\d{3})(\d)/, "$1.$2")
+        .replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+});
+
+pesquisaCep.addEventListener("blur", function () {
+    let cep = document.querySelector("#cep").value.replace(/\D/g, "");
+
+    if (cep != "") {
+        let validarCep = /^[0-9]{8}$/;
+
+        if (validarCep.test(cep)) {
+            document.querySelector("#estado").value = "loading..."
+            document.querySelector("#cidade").value = "loading..."
+            document.querySelector("#bairro").value = "loading..."
+            document.querySelector("#logradouro").value = "loading..."
+            document.querySelector("#complemento").value = "loading..."
+
+            let script = document.createElement("script");
+
+           
+            script.src = "https://viacep.com.br/ws/" + cep + "/json/?callback=meuCallback";
+
+
+            document.body.appendChild(script);
+
+
+        }
+        else {
+            limpaFormularioCep();
+            alert("Formato do cep e inválido.")
+        }
+    }
+    else {
+        limpaFormularioCep();
+    }
+});
+
+
 const exibirDados = () => {
-    let nome = document.querySelector("nome").value;
-    let email = document.querySelector("#email").value;
-    let nascimento = document.querySelector("#nascimento").value;
-    let telefone = document.querySelector("#telefone").value;
-    let cpf = document.querySelector("#cpf").value;
-    let cep = document.querySelector("#cep").value;
-    let estado = document.querySelector("#estado").value;
-    let cidade = document.querySelector("#cidade").value;
-    let bairro = document.querySelector("#bairro").value;
-    let logradouro = document.querySelector("#logradouro").value;
-    let complemento = document.querySelector("#complemento").value;
-    let numero = document.querySelector("#numero").value;
+    let nome = document.querySelector('#nome').value;
+    let email = document.querySelector('#email').value;
+    let nascimento = document.querySelector('#nascimento').value;
+    let telefone = document.querySelector('#telefone').value;
+    let cpf = document.querySelector('#cpf').value;
+    let cep = document.querySelector('#cep').value;
+    let estado = document.querySelector('#estado').value;
+    let cidade = document.querySelector('#cidade').value;
+    let bairro = document.querySelector('#bairro').value;
+    let logradouro = document.querySelector('#logradouro').value;
+    let complemento = document.querySelector('#complemento').value;
+    let numero = document.querySelector('#numero').value;
 
     //Saida de dados
     document.querySelector('#nomeResult').innerHTML = `<br>${nome}<br><br><hr>`;
