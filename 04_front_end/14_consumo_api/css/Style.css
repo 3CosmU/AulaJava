@@ -1,0 +1,21 @@
+.pic {
+    width: 30px;
+    margin: 10px 0px;
+
+}
+
+.nav-link {
+
+    font-size: 25px;
+    text-shadow: 1px 1px 10px;
+
+}
+
+.sombra-navbar {
+    background: linear-gradient(to right, #7b57d5, #6c88fa, #d329e6);
+    box-shadow: 0px 5px 20px #6e6cf1;
+    border-bottom: 1px solid #670bdf;
+    ;
+}
+
+

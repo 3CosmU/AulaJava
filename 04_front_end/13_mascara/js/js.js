@@ -28,11 +28,11 @@ const exibirInfo = () => {
     //apagar dados de todo o formulario
     form.reset();
 
-   
+
 
 }
 
-//Mascara
+//Mascara Cpf
 cpfMask.addEventListener("input", function () {
     this.value = this.value
         .replace(/\D/g, "")
@@ -41,7 +41,7 @@ cpfMask.addEventListener("input", function () {
         .replace(/(\d{3})(\d{1,2})$/, "$1-$2");
 });
 
-
+//Mascara Telefone
 telefoneMask.addEventListener("input", function () {
     this.value = this.value
         .replace(/\D/g, "")
@@ -50,6 +50,7 @@ telefoneMask.addEventListener("input", function () {
         .replace(/(-\d{4})\d+?$/, "$1");
 });
 
+//Mascara Cep
 cepMask.addEventListener("input", function () {
     this.value = this.value
         .replace(/\D/g, "")
