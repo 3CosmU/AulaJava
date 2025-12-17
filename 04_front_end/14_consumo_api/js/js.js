@@ -1,9 +1,14 @@
+//Seleção dos elementos do formulário
 const form = document.querySelector('form');
+
+//Seleciona o formulário inteiro para poder capturar o envio (submit).
 const telefoneMask = document.querySelector('#telefone');
 const cepMask = document.querySelector('#cep');
 const pesquisaCep = document.querySelector('#cep');
 const pesquisaCpf = document.querySelector("#cpf")
 
+
+//Função para limpar os campos de endereço
 const limpaFormularioCep = () => {
     document.querySelector('#estado').value = ("");
     document.querySelector('#cidade').value = ("");
@@ -11,7 +16,11 @@ const limpaFormularioCep = () => {
     document.querySelector('#logradouro').value = ("");
     document.querySelector('#complemento').value = ("");
 }
-
+/*  Callback do ViaCEP (retorno da API),
+Função chamada automaticamente pelo ViaCEP quando o CEP é consultado 
+Verifica se não houve erro na resposta.
+Preenche os campos do formulário com os dados retornados pela API.
+*/
 const meuCallback = (conteudo) => {
     if (!("erro" in conteudo)) {
         document.querySelector('#estado').value = (conteudo.uf);
@@ -51,6 +60,14 @@ pesquisaCpf.addEventListener("input", function () {
         .replace(/(\d{3})(\d{1,2})$/, "$1-$2");
 });
 
+/* Busca automática do CEP (quando sai do campo)
+Executa quando o usuário sai do campo CEP.
+Remove o hífen e deixa só números.
+Expressão regular para validar CEP com 8 dígitos.
+Verifica se o CEP é válido.
+Mostra "loading..." enquanto busca os dados. 
+Cria dinamicamente um <script> para consumir a API do ViaCEP usando JSONP.*/
+
 pesquisaCep.addEventListener("blur", function () {
     let cep = document.querySelector("#cep").value.replace(/\D/g, "");
 
@@ -66,7 +83,7 @@ pesquisaCep.addEventListener("blur", function () {
 
             let script = document.createElement("script");
 
-           
+
             script.src = "https://viacep.com.br/ws/" + cep + "/json/?callback=meuCallback";
 
 
@@ -84,6 +101,9 @@ pesquisaCep.addEventListener("blur", function () {
     }
 });
 
+/* Função para exibir os dados preenchidos
+    Captura todos os valores do formulário.
+ */
 
 const exibirDados = () => {
     let nome = document.querySelector('#nome').value;
@@ -99,7 +119,9 @@ const exibirDados = () => {
     let complemento = document.querySelector('#complemento').value;
     let numero = document.querySelector('#numero').value;
 
-    //Saida de dados
+    /*   Saida de dados
+        Lê os dados digitados pelo usuário.
+        Exibe os dados na tela, campo por campo. */
     document.querySelector('#nomeResult').innerHTML = `<br>${nome}<br><br><hr>`;
     document.querySelector('#emailResult').innerHTML = `<b>E-mail:</b> ${email}<br><hr>`;
     document.querySelector('#nascimentoResult').innerHTML = `<b>Data de Nascimento:</b> ${nascimento}<br><hr>`;
@@ -115,12 +137,14 @@ const exibirDados = () => {
 
 
 
-
+    /* Reset do formulário */
     form.reset();
 
 
 }
 
+
+/* Evento de envio do formulário */
 form.addEventListener("submit", function (event) {
     event.preventDefault();
     exibirDados();
