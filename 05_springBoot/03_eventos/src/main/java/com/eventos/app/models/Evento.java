@@ -9,25 +9,21 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-@Entity // Transforma a classe em entidade
+@Entity
 public class Evento implements Serializable {
-    private static final long serialVersionUId = 1L;
+    private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    
-    //Variaveis
     private long idEvento;
     private String nome;
     private String local;
     private LocalDate data;
     private LocalTime hora;
 
-    // Construtor VAZIO
     public Evento() {
     }
 
-    // Construtor Getter/ Setter
     public long getIdEvento() {
         return this.idEvento;
     }
@@ -67,5 +63,4 @@ public class Evento implements Serializable {
     public void setHora(LocalTime hora) {
         this.hora = hora;
     }
-
 }
