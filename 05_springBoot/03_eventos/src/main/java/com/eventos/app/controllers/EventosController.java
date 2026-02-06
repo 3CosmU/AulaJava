@@ -2,9 +2,13 @@ package com.eventos.app.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated; 
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.eventos.app.models.Evento;
 import com.eventos.app.repository.EventosRepository;
@@ -43,6 +47,26 @@ public class EventosController {
     @RequestMapping("/cadastroSucesso")
     public String cadastroSucesso() {
         return "cadastro-sucesso";
+    }
+
+    // Metodo para editar evento
+    @RequestMapping(value = "/editarEvento/{idEvento}", method = RequestMethod.GET)
+    public ModelAndView editarEvento(@PathVariable("idEvento") long idEvento) {
+        Evento evento = csr.findByIdEvento(idEvento);
+        ModelAndView mv = new ModelAndView("editar-evento");
+        mv.addObject("evento", evento);
+        return mv;
+    }
+
+    @RequestMapping(value = "/editarEvento/{idEvento}", method = RequestMethod.POST)
+    public String editarEvento(@Validated Evento evento, BindingResult result, RedirectAttributes attributes) {
+        csr.save(evento);
+        return "redirect:/alteracaoSucesso";
+    }
+
+    @RequestMapping("/alteracaoSucesso")
+    public String alteracaoSucesso() {
+        return "editar-sucesso";
     }
 
 }

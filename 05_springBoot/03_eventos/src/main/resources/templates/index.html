@@ -16,45 +16,49 @@
 
   <!-- main -->
   <main>
-  <div class="container">
+    <div class="container">
 
-    <h1>Próximos Eventos</h1>
-    <hr>
+      <h1>Próximos Eventos</h1>
+      <hr>
 
-    <div class="row">
+      <div class="row">
 
-      <div class="col-md-4 mb-4" th:each="evento : ${eventos}">
-        <div class="card h-100"
-             style="background-image: url('https://i.pinimg.com/236x/29/88/01/29880130ede2c32f479dd1428869ebd0.jpg');
+        <div class="col-md-4 mb-4" th:each="evento : ${eventos}">
+
+          <div class="card h-100" style="background-image: url('https://png.pngtree.com/thumb_back/fh260/back_our/20190619/ourmid/pngtree-anniversary-event-poster-background-material-image_134436.jpg');
                     background-size: cover;
                     background-position: center;">
-          <div class="card-body" style="background: rgba(0,0,0,0.4); color: white;">
 
-            <h5 class="card-title" th:text="${evento.nome}"></h5>
 
-            <h6 class="card-subtitle mb-2 text-body-secondary">
-              ID: <span th:text="${evento.idEvento}"></span>
-            </h6>
+            <div class="card-body" style="background: rgba(129, 116, 116, 0.4); color: white;">
 
-            <div class="card-text">
-              Local: <span th:text="${evento.local}"></span>
+              <h5 class="card-title" th:text="${evento.nome}"></h5>
+
+              <h6 class="card-subtitle mb-2 text-body-secondary">
+                ID: <span th:text="${evento.idEvento}"></span>
+              </h6>
+
+              <div class="card-text">
+                Local: <span th:text="${evento.local}"></span>
+              </div>
+
+              <div class="card-text">
+                Data: <span th:text="${#temporals.format(evento.data, 'dd/MM/yyyy')}"></span>
+              </div>
+
+              <div class="card-text"> Hora: <span th:text="${evento.hora}"></span>
+              </div>
+
+              <a th:href="@{/editarEvento/{id}(id=${evento.idEvento})}" class="card-link">Editar</a>
+              <a href="#" class="card-link">Excluir</a>
+
             </div>
-
-            <div class="card-text">
-              Data: <span th:text="${#temporals.format(evento.data, 'dd/MM/yyyy')}"></span>
-            </div>
-
-            <div class="card-text">
-              Hora: <span th:text="${evento.hora}"></span>
-            </div>
-
           </div>
         </div>
-      </div>
 
+      </div>
     </div>
-  </div>
-</main>
+  </main>
 
 
 

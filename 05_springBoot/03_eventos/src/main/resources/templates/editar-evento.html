@@ -18,7 +18,7 @@
     <main>
         <div class="container">
 
-            <h1>Cadastrar evento</h1>
+            <h1>Editar evento</h1>
             <hr>
             <form class="mt-5" method="POST">
                 <div class="row">
@@ -26,29 +26,34 @@
 
                     <div class="mb-3">
                         <label for="nome" class="form-labem">Nome do evento:</label>
-                        <input type="text" class="form-control" id="nome" name="nome" required />
+                        <input type="text" class="form-control" id="nome" name="nome" th:value="${evento.nome}"
+                            required />
                     </div>
 
 
                     <div class="mb-3">
                         <label for="date" class="form-labem">Data do evento:</label>
-                        <input type="date" class="form-control" id="data" name="data" required />
+                        <input type="date" class="form-control" id="data" name="data"
+                            th:value="${evento.data !=null ? #temporals. format(evento.data, 'yyyy-MM-dd') : ''}"
+                            required />
                     </div>
 
                     <div class="mb-3">
                         <label for="local" class="form-labem">Local:</label>
-                        <input type="text" class="form-control" id="local" name="local" required />
+                        <input type="text" class="form-control" id="local" name="local" th:value="${evento.local}"
+                            required />
                     </div>
 
 
                     <div class="mb-3">
                         <label for="hora" class="form-labem">Hora do evento</label>
-                        <input type="time" class="form-control" id="hora" name="hora" required />
+                        <input type="time" class="form-control" id="hora" name="hora" th:value="${evento.hora}"
+                            required />
                     </div>
 
 
                     <div class="mb-3">
-                        <button type="submit" class="btn btn-primary">Cadastrar evento</button>
+                        <button type="submit" class="btn btn-primary">Editar evento</button>
                     </div>
 
                 </div>
