@@ -3,7 +3,8 @@ package com.eventos.app.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated; 
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -69,4 +70,24 @@ public class EventosController {
         return "editar-sucesso";
     }
 
+    // Metodo para excluir registro na base de dados
+
+    @RequestMapping("/confirmarExclusao/{idEvento}")
+    public ModelAndView confirmarExclusao(@PathVariable("idEvento") long idEvento) {
+        Evento evento = csr.findByIdEvento(idEvento);
+        ModelAndView mv = new ModelAndView("Excluir-evento");
+        mv.addObject("evento", evento);
+        return mv;
+    }
+
+    @RequestMapping("/excluirEvento")
+    public String excluirEvento(long idEvento) {
+        Evento evento = csr.findByIdEvento(idEvento);
+        csr.delete(evento);
+        return "redirect:/";
+    }
+
+    // Css
+
+  
 }

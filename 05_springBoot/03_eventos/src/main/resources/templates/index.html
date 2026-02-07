@@ -10,6 +10,8 @@
 </head>
 
 <body>
+  <!-- css -->
+  <link rel="stylesheet" th:href="@{/css/style.css}">
 
   <!-- header -->
   <header th:replace="~{navbar :: navbar} "></header>
@@ -18,8 +20,9 @@
   <main>
     <div class="container">
 
-      <h1>Próximos Eventos</h1>
-      <hr>
+      <h1 class="titulo-cintilante">Próximos Eventos</h1>
+
+      <br><br>
 
       <div class="row">
 
@@ -49,8 +52,12 @@
               <div class="card-text"> Hora: <span th:text="${evento.hora}"></span>
               </div>
 
-              <a th:href="@{/editarEvento/{id}(id=${evento.idEvento})}" class="card-link">Editar</a>
-              <a href="#" class="card-link">Excluir</a>
+              <!-- <a th:href="@{/editarEvento/{id}(id=${evento.idEvento})}" class="card-link">Editar</a>
+              <a th:href="@{/confirmarExclusao/{id}(id=${evento.idEvento})}" class="card-link">Excluir</a> -->
+
+              <a th:href="@{/editarEvento/{id}(id=${evento.idEvento})}" class="card-link btn-editar">Editar</a>
+              <a th:href="@{/confirmarExclusao/{id}(id=${evento.idEvento})}" class="card-link btn-excluir">Excluir</a>
+
 
             </div>
           </div>

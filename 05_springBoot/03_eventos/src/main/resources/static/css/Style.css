@@ -1,0 +1,301 @@
+body{
+    background-color: rgb(238, 233, 233);
+}
+/* ===== Navbar cintilante ===== */
+/* =========================
+   NAVBAR CINTILANTE + SOMBRA
+   ========================= */
+.navbar {
+  background: linear-gradient(90deg, #1a1a1a, #2a2a2a);
+  position: relative;
+  overflow: hidden;
+
+  /* sombra adicionada */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7),
+              0 0 20px rgba(255, 0, 150, 0.35); /* sombra colorida */
+}
+
+.navbar::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 0, 150, 0),
+    rgba(255, 0, 150, 0.8),
+    rgba(0, 255, 255, 0),
+    rgba(0, 255, 255, 0.8),
+    rgba(255, 255, 0, 0)
+  );
+  animation: shimmer 5s linear infinite;
+  filter: blur(10px);
+  opacity: 0.7;
+}
+
+@keyframes shimmer {
+  0%   { transform: translate(0, 0); }
+  100% { transform: translate(50%, 50%); }
+}
+
+/* cor do texto do navbar */
+.navbar .nav-link,
+.navbar .navbar-brand {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* efeito ao passar o mouse */
+.navbar .nav-link:hover {
+  color: #dcd6db;
+}
+
+/* =========================
+   TÍTULO CINTILANTE (CENTRALIZADO)
+   ========================= */
+.titulo-cintilante {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #fff;
+  text-align: center;
+
+  position: relative;
+  display: block;
+  margin: 30px auto;
+  width: fit-content;
+
+  padding: 10px 25px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.titulo-cintilante::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 0, 150, 0),
+    rgba(255, 0, 150, 0.8),
+    rgba(0, 255, 255, 0),
+    rgba(0, 255, 255, 0.8),
+    rgba(255, 255, 0, 0)
+  );
+  animation: shimmer 4s linear infinite;
+  filter: blur(12px);
+  opacity: 0.8;
+}
+
+@keyframes shimmer {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50%, 50%); }
+}
+
+
+.titulo-cintilante::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 0, 150, 0),
+    rgba(255, 0, 150, 0.9),
+    rgba(0, 255, 255, 0),
+    rgba(0, 255, 255, 0.9),
+    rgba(255, 255, 0, 0)
+  );
+  animation: shimmer 4s linear infinite;
+  filter: blur(12px);
+  opacity: 0.8;
+}
+
+@keyframes shimmer {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50%, 50%); }
+}
+
+
+/* =========================
+   FUNDO (imagem + movimento + brilho)
+   ========================= */
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  /* imagem de fundo */
+  background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20230325/pngtree-laser-spotlight-show-stage-decoration-decoration-pattern-image_2104674.jpg');
+  background-size: 120% 120%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  /* animação de movimento */
+  animation: moverFundo 20s linear infinite;
+}
+
+@keyframes moverFundo {
+  0% {
+    background-position: center;
+  }
+  50% {
+    background-position: top right;
+  }
+  100% {
+    background-position: center;
+  }
+}
+
+/* camada cintilante por cima do fundo */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+
+  background: linear-gradient(
+    45deg,
+    rgba(255, 0, 150, 0),
+    rgba(255, 0, 150, 0.7),
+    rgba(0, 255, 200, 0),
+    rgba(0, 255, 200, 0.7),
+    rgba(255, 255, 255, 0)
+  );
+
+  /* animação cintilante */
+  animation: brilhoFundo 6s linear infinite;
+  filter: blur(20px);
+  opacity: 0.6;
+}
+
+@keyframes brilhoFundo {
+  0% {
+    transform: translate(-20%, -20%);
+  }
+  50% {
+    transform: translate(20%, 20%);
+  }
+  100% {
+    transform: translate(-20%, -20%);
+  }
+}
+
+
+
+/* BOTÃO EDITAR */
+.btn-editar {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 2px solid #00ffc8;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.6);
+  transition: transform 0.2s ease;
+}
+
+.btn-editar::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    rgba(0, 255, 200, 0),
+    rgba(0, 255, 200, 0.8),
+    rgba(255, 255, 255, 0),
+    rgba(0, 255, 200, 0.8)
+  );
+  animation: shimmer 4s linear infinite;
+  filter: blur(10px);
+  opacity: 0.7;
+}
+
+.btn-editar:hover {
+  transform: translateY(-2px);
+  color: #00ffc8;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* BOTÃO EXCLUIR */
+.btn-excluir {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 2px solid #ff005d;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.6);
+  transition: transform 0.2s ease;
+}
+
+.btn-excluir::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 0, 93, 0),
+    rgba(255, 0, 93, 0.8),
+    rgba(255, 255, 255, 0),
+    rgba(255, 0, 93, 0.8)
+  );
+  animation: shimmer 4s linear infinite;
+  filter: blur(10px);
+  opacity: 0.7;
+}
+
+.btn-excluir:hover {
+  transform: translateY(-2px);
+  color: #ff005d;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Título do evento */
+.card-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #000000;
+  text-shadow: 0 0 10px rgba(144, 3, 3, 0.8);
+  margin-bottom: 8px;
+}
+
+
+
+/* Texto do card */
+.card-text {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #0e0d0d;
+  text-shadow: 0 0 10px rgba(144, 3, 3, 0.8);
+  margin-bottom: 6px;
+}
+
+/* Deixar o texto com efeito leve de brilho */
+.card-text span {
+  color: #000000;
+  font-weight: 700;
+}
