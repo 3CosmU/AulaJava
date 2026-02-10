@@ -10,7 +10,8 @@
 </head>
 
 <body>
-
+    <!-- css -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
     <!-- header -->
     <header th:replace="~{navbar :: navbar} "></header>
 
@@ -18,7 +19,7 @@
     <main>
         <div class="container">
 
-            <h1>Cadastrar evento</h1>
+            <h1 class="titulo-cintilante">Cadastrar evento</h1>
             <hr>
             <form class="mt-5" method="POST">
                 <div class="row">
